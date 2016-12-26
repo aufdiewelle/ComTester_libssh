@@ -1,0 +1,21 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/ssh.png</file>
+        <file>resource/picScanner.png</file>
+        <file>resource/picSocket.png</file>
+        <file>resource/picSsh.png</file>
+	<file>resource/copyrightSign.png</file>
+        <file>resource/infoSign.png</file>
+	<file>resource/aboutSign.png</file>
+	<file>resource/bugSign.png</file>
+	<file>resource/helpSign.png</file>
+	<file>resource/encryptionSign.png</file>
+	<file>resource/serial2net.png</file>
+
+        <file>settingsLibssh.ini</file>
+
+	<file>resource/serial2net_SoftwareBox.ico</file>
+
+	<file>license_ComTester_(L)GPLv3.txt</file>
+    </qresource>
+</RCC>
