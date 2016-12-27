@@ -35,7 +35,8 @@ SOURCES += main.cpp\
     textinterface.cpp \
     aboutdialog.cpp \
     aboutwidget.cpp \
-    splashscreen.cpp
+    splashscreen.cpp \
+    version.cpp
 
 HEADERS  += widget.h \
     sshtunnel.h \
@@ -43,7 +44,8 @@ HEADERS  += widget.h \
     textinterface.h \
     aboutdialog.h \
     aboutwidget.h \
-    splashscreen.h
+    splashscreen.h \
+    version.h
 
 FORMS +=
 
