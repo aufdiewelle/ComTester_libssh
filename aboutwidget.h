@@ -42,8 +42,9 @@ class AboutWidget : public QWidget
 
     private:
         QString strSoftwareName = "ComTester (C) 2016";
-        QString strSoftwareRelease = "V0.0.0.1";
+        QString strSoftwareRelease = "";
         QString strHyperlink = "<a href=\"http://www.serial2net.ch\">www.serial2net.ch</a>";
+        QString strGitRepoLink = "<a href=\"https://github.com/aufdiewelle/ComTester_libssh.git\">Git Repository</a>";
         QString strEmailAdress = "<a href='mailto:info@serial2net.ch'>info@serial2net.ch</a>";
         QString strDevelopedBy = "Entwickelt von:";
         QString strDeveloper1 = "Michael Ramstein";
@@ -54,6 +55,7 @@ class AboutWidget : public QWidget
         QLabel *lblSoftwareName;
         QLabel *lblSoftwareRelease;
         QLabel *lblHyperlink;
+        QLabel *lblGitRepo;
         QLabel *lblEmailAdress;
         QLabel *lblDevelopedBy;
         QLabel *lblDeveloper1;

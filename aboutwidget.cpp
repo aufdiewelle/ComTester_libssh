@@ -27,6 +27,7 @@
  */
 
 #include "aboutwidget.h"
+#include "version.h"
 
 #include <QLabel>
 #include <QPixmap>
@@ -35,6 +36,9 @@
 
 AboutWidget::AboutWidget(QWidget *parent) : QWidget(parent)
 {
+    Version *version = new Version();
+    strSoftwareRelease = version -> getVersion();
+
     this -> setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
 
     QSpacerItem *spiTabWidget1 = new QSpacerItem(10,10);
@@ -60,6 +64,12 @@ AboutWidget::AboutWidget(QWidget *parent) : QWidget(parent)
     lblHyperlink -> setAlignment(Qt::AlignCenter);
     lblHyperlink -> setTextInteractionFlags(Qt::TextBrowserInteraction);
     lblHyperlink -> setOpenExternalLinks(true);
+
+    lblGitRepo = new QLabel(strGitRepoLink);
+    lblGitRepo -> setFont(times12);
+    lblGitRepo -> setAlignment(Qt::AlignCenter);
+    lblGitRepo -> setTextInteractionFlags(Qt::TextBrowserInteraction);
+    lblGitRepo -> setOpenExternalLinks(true);
 
     lblEmailAdress = new QLabel(strEmailAdress);
     lblEmailAdress -> setFont(times12);
@@ -96,6 +106,8 @@ AboutWidget::AboutWidget(QWidget *parent) : QWidget(parent)
     vboMain -> addWidget(lblHyperlink);
     vboMain -> addItem(spiTabWidget1);
     vboMain -> addWidget(lblEmailAdress);
+    vboMain -> addItem(spiTabWidget1);
+    vboMain -> addWidget(lblGitRepo);
     vboMain -> addItem(spiTabWidget1);
     vboMain -> addWidget(lblDevelopedBy);
     vboMain -> addWidget(lblDeveloper1);

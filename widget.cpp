@@ -28,6 +28,7 @@
 
 #include "widget.h"
 #include "aboutdialog.h"
+#include "version.h"
 
 #include <QApplication>
 #include <QPushButton>
@@ -55,7 +56,10 @@
 
 Widget::Widget(QWidget *parent) : QWidget(parent)
 {
-    this -> setWindowTitle("serial2net SSH - ComTester V0.0.0.1");
+    Version *version = new Version();
+    QString myVersion = version -> getVersion();
+
+    this -> setWindowTitle("serial2net SSH - ComTester " + myVersion);
     this -> setWindowIcon(QIcon(":/resource/ssh.png"));
 
     settingFilePath = "/settingsLibssh.ini";
@@ -733,7 +737,6 @@ void Widget::btnConnectTunnelClicked(bool click)
 
         btnConnectTunnel -> setText("Connect Tunnel");
         addTextToTextField("Disconnecting SSH-Tunnel...");
-        addTextToTextField("");
 
         this -> setLineEditCommandDisable();
 
@@ -764,6 +767,11 @@ void Widget::btnConnectTunnelClicked(bool click)
     }
 
     addTextToTextField(strState);
+
+    if(strState == "Disconnected! Code: 0"){
+        addTextToTextField("");
+    }
+
 }
 
 void Widget::btnConnectSocketClicked(bool click)
@@ -1085,9 +1093,12 @@ void Widget::btnBugReportClicked(bool click)
 {
     qDebug() << "btnBugReportClicked";
 
+    Version *version = new Version();
+    QString myVersion = version -> getVersion();
+
     QDesktopServices::openUrl(QUrl("mailto:info@serial2net.ch?subject=Report bug"
                                    "&body=Herewith I report the following bug "
-                                   "at the software ComTester V0.0.0.1:"));
+                                   "at the software ComTester " + myVersion + ":\r\n\r\n"));
 }
 
 void Widget::btnHelpClicked(bool click)
