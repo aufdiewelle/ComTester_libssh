@@ -707,6 +707,9 @@ void Widget::btnConnectTunnelClicked(bool click)
 
                 case 0: strState = "Connected! Code: 0";
                 break;
+
+                case 1: strState = "Connected! Code: 1";
+                break;
         }
 
         QApplication::setOverrideCursor(Qt::ArrowCursor);
@@ -760,6 +763,9 @@ void Widget::btnConnectTunnelClicked(bool click)
 
             case 0: strState = "Disconnected! Code: 0";
             break;
+
+            case 1: strState = "Disconnected! Code: 1";
+            break;
         }
 
         qDebug() << "Sleep 1s. to prevent the user to reconnect directly (crash if not completly disconnected)";
@@ -768,7 +774,7 @@ void Widget::btnConnectTunnelClicked(bool click)
 
     addTextToTextField(strState);
 
-    if(strState == "Disconnected! Code: 0"){
+    if(strState == "Disconnected! Code: 0" | strState == "Disconnected! Code: 1"){
         addTextToTextField("");
     }
 
