@@ -34,7 +34,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG  += c++11
 
 #with TARGET the name of the deployed file will set
-TARGET = ComTester0.0.1.9
+TARGET = ComTester
 TEMPLATE = app
 
 INCLUDEPATH += $$PWD/
@@ -69,7 +69,7 @@ FORMS +=
 #set properties of deployed execute file
 win32:
     QMAKE_TARGET_DESCRIPTION = Communication test serial2net
-    VERSION = 0.0.1.9
+    VERSION = 1.0.1.0
     QMAKE_TARGET_PRODUCT = ComTester
     QMAKE_TARGET_COMPANY = www.serial2net.ch
     QMAKE_TARGET_COPYRIGHT = serial2net(C)
