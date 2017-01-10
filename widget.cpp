@@ -297,7 +297,7 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     letCommandTimeout -> setPlaceholderText("200");
     letCommandTimeout -> setFixedWidth(50);
 
-    letScannerHost = new QLineEdit(ScannerHost); //remotedata-mylterouter.dyndns.org
+    letScannerHost = new QLineEdit(ScannerHost);
     letScannerHost -> setToolTip("Domain-Name or IPv4-Address of target interface");
     letScannerHost -> setPlaceholderText("serial2net.dyndns.org");
     letScannerPortFrom = new QLineEdit(ScannerPortFrom);
