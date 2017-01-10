@@ -210,10 +210,10 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
 
     QIntValidator *valIntUnsigned16 = new QIntValidator(1, 65535);
 
-    letSshHost = new QLineEdit(SshHost); //remotedata-mylterouter.dyndns.org
+    letSshHost = new QLineEdit(SshHost);
     letSshHost -> setToolTip("Domain-Name or IPv4-Address of target interface");
     letSshHost -> setPlaceholderText("serial2net.dyndns.org");
-    letSshPort = new QLineEdit(SshPort); //10000
+    letSshPort = new QLineEdit(SshPort);
     letSshPort -> setToolTip("Port number within the range 1 to 65'535");
     letSshPort -> setValidator(valIntUnsigned16);
     letSshPort -> setPlaceholderText("22");
@@ -224,19 +224,19 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     letSshPassword -> setToolTip("Password to sign on at SSH-Login");
     letSshPassword -> setPlaceholderText("myPassword");
     letSshPassword -> setEchoMode(QLineEdit::Password);
-    letTunnelHost = new QLineEdit(TunnelHost); //localhost
+    letTunnelHost = new QLineEdit(TunnelHost);
     letTunnelHost -> setToolTip("Domain-Name \"localhost\" or IPv4-Adress\r\n"
                                 "within the range 127.0.0.1 to 127.255.255.254");
     letTunnelHost -> setPlaceholderText("localhost");
-    letTunnelClient = new QLineEdit(TunnelClient); //localhost
+    letTunnelClient = new QLineEdit(TunnelClient);
     letTunnelClient -> setToolTip("Domain-Name \"localhost\" or IPv4-Adress\r\n"
                                   "within the range 127.0.0.1 to 127.255.255.254");
     letTunnelClient -> setPlaceholderText("localhost");
-    letTunnelClientPort = new QLineEdit(TunnelClientPort); //10002
+    letTunnelClientPort = new QLineEdit(TunnelClientPort);
     letTunnelClientPort -> setToolTip("Port number within the range 1 to 65'535");
     letTunnelClientPort -> setValidator(valIntUnsigned16);
     letTunnelClientPort -> setPlaceholderText("10002");
-    letTunnelServerPort = new QLineEdit(TunnelServerPort); //10002
+    letTunnelServerPort = new QLineEdit(TunnelServerPort);
     letTunnelServerPort -> setToolTip("Port number within the range 1 to 65'535");
     letTunnelServerPort -> setValidator(valIntUnsigned16);
     letTunnelServerPort -> setPlaceholderText("10002");
@@ -245,10 +245,10 @@ Widget::Widget(QWidget *parent) : QWidget(parent)
     letTunnelTimeout -> setValidator(valIntUnsigned16);
     letTunnelTimeout -> setPlaceholderText("1000");
 
-    letSocketHost = new QLineEdit(SocketHost); //remotedata-mylterouter.dyndns.org
+    letSocketHost = new QLineEdit(SocketHost);
     letSocketHost -> setToolTip("Domain-Name or IPv4-Address of target interface");
     letSocketHost -> setPlaceholderText("serial2net.dyndns.org");
-    letSocketPort = new QLineEdit(SocketPort); //10002
+    letSocketPort = new QLineEdit(SocketPort);
     letSocketPort -> setToolTip("Port number within the range 1 to 65'535");
     letSocketPort -> setValidator(valIntUnsigned16);
     letSocketPort -> setPlaceholderText("10002");

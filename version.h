@@ -10,7 +10,7 @@ public:
     QString getVersion();
 
 private:
-    QString version = "v0.0.1.9";
+    QString version = "v1.0.1.0";
 
 };
 
